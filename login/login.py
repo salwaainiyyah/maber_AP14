@@ -51,9 +51,9 @@ def login_user():
         except ValueError as error:
             print(error)
 
-        check_user(username, password)
-        if check_user(username, password) == True:
-            break
+    check_user(username, password)
+    if check_user(username, password) == True:
+            return True
  
 def signup_user():
 
@@ -79,6 +79,6 @@ def signup_user():
         except ValueError as error:
             print(error)
 
-        create_user(username, password)
-        if create_user(username, password) == True:
-            break
+    create_user(username, password)
+    if create_user(username, password) == True:
+        return True
