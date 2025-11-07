@@ -1,37 +1,34 @@
-WIDTH = 60
 from pyfiglet import Figlet
 
+from ui_utils import line, space, text_left
 
-def line():
-    print("=" * WIDTH)
-    
-def space():
-    print("\n")
 
-def header(title: str):
-    line()
-    print(title.center(WIDTH).capitalize())
-    line()
-    
-def text_centered(text):
-    print(text.center(WIDTH))
-
-def text_left(text):
-    print(text)
-    
 def main_menu():
-    line()
-    text_left("Menu Utama:")
-    text_left("1. Mari Berhitung")
-    text_left("2. Lihat Peringkat")
-    text_left("3. Lihat Profil")
-    text_left("4. Keluar Aplikasi")    
-    line()
-    
-    choice = input("Pilih opsi (1-4): ")
-    
+    while True:
+        line()
+        space()
+        text_left("Menu Utama:")
+        text_left("1. Mulai Permainan ⚔️")
+        text_left("2. Lihat Peringkat 🏆")
+        text_left("3. Lihat Profil 👤")
+        text_left("4. Keluar Aplikasi 🚪")
+        space()
+        choice = input("Pilih opsi (1-4): ")
+        line()
+        if choice == "1":
+            from category.menu import chooseCategory
+            chooseCategory()
+        elif choice == "4":
+            goodbye_banner()
+            break
+            
+
 def banner():
-    banner = Figlet(font='small', justify='left')
+    banner = Figlet(font='slant', width=80, justify='center')
+    print(banner.renderText("WELCOME TO MABER"))
     line()
-    print(banner.renderText("MABER AP14"))
+
+def goodbye_banner():
+    banner = Figlet(font='slant', width=80, justify='center')
+    print(banner.renderText(f"SEE YOU AGAIN! \n"))
     line()

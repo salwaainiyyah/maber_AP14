@@ -1,6 +1,6 @@
-from utils import header, line, space, text_centered, text_left
+from ui_utils import line, text_centered, text_left
 import re
-from database.user import create_user, check_user
+from database.user import check_user, create_user
 
 def login_screen():
     isLoggedIn = False
