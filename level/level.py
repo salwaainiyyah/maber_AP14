@@ -37,6 +37,6 @@ def progres_level(kategori):
             repeat = health.lose_life()
             if repeat == True:
                 current_level = 0
-                rew13
+
                 ard.proses_level(kategori, current_level, current_level)
                 
