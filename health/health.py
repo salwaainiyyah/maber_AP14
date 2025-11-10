@@ -1,7 +1,7 @@
 import database.config as config
 import ui_utils as ui
 
-player_lives = config.player_
+player_lives = config.player_lives
 
 def reset_life():
     global player_lives
