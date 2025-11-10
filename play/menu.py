@@ -1,8 +1,8 @@
-from ui_utils import info, line, space, text_left, warning
 import database.config as config
+from ui_utils import info, line, space, text_left, warning
+
 
 def chooseCategory():
-    current_level = config.current_level
     
     while True:
         space()
@@ -20,18 +20,14 @@ def chooseCategory():
 
         elif choice == "2":
             info("Kamu memilih kategori Teka Teki Gambar.")
-            if current_level == 0:    
-                from tutorial.tutorial import tutorial_tekateki_gambar
-                result = tutorial_tekateki_gambar()
-                if result == True:
-                    import level.level as level
+            from level import level
+            if config.current_riddle_level == 0:
+                from tutorial.tutorial import riddle_tutorial
+                if riddle_tutorial():
                     level.progres_level("Teka Teki Gambar")
-                    break
-                else:
-                    break
-            else :
-                import level.level as level
+            else:
                 level.progres_level("Teka Teki Gambar")
+            break
 
         elif choice == "3":
             info("Kamu memilih kategori Deret Angka.")

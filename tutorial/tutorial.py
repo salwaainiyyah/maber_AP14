@@ -1,4 +1,7 @@
-import sys, time, random
+import random
+import sys
+import time
+
 
 def typeplay(text):
     for char in text:
@@ -102,7 +105,7 @@ def riddle_tutorial():
     while True:
         lanjut_ulang_riddle = input("Tekan [Enter] untuk memulai! Ketik [Ulang] untuk melihat ulang tutorial: ")
         if lanjut_ulang_riddle == "":
-            break
+            return True
         elif lanjut_ulang_riddle.lower() == "ulang":
             riddle_tutorial()
         else:
