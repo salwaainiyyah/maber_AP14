@@ -16,7 +16,7 @@ def progres_level(kategori):
 
     health.reset_life(kategori)
 
-    if current_level <= 20:
+    if current_level < 20:
         print(f"\nKategori: {kategori}")
         print("Soal terdiri dari level 1-20. Jika jawaban salah, nyawa berkurang 1.")
         print("Dan jika nyawa habis, kamu harus mengulang dari level 1.")

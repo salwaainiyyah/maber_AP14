@@ -2,10 +2,10 @@
     "hambaallah": {
         "username": "hambaallah",
         "password": "$2b$12$6oHpF7dovQRV6IrmU.03BOb9V8yLGKIsSBgkh3rlKBRA1RGgv9YaC",
-        "total_level": 41,
+        "total_level": 40,
         "current_riddle_level": 1,
         "current_riddle_lives": 5,
-        "current_arithmetic_level": 20,
+        "current_arithmetic_level": 19,
         "current_arithmetic_lives": 5,
         "current_sequence_level": 20,
         "current_sequence_lives": 5,
